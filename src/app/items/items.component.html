@@ -1,0 +1,57 @@
+<app-newitem (messageEvent)="addTodo($event)"></app-newitem>
+<!-- <button (click) = "addTodo('fdsf')">fsd</button> -->
+
+
+<br>
+
+<div class="tasks">
+
+  <div class="table w-50">
+    <div class="table-head">
+      <h2>Todos</h2>
+      <div class="d-flex">
+        <button class="btn-delete-all" (click)="deleteAll()">Eliminar todas</button>
+        <button class="btn-complete-all" (click)="completeAll()">Completar todas</button>
+      </div>
+    </div>
+    @for (item of todos; track item.task) {
+
+      <div class="row">
+        @if (item.completed) {
+          <input type="checkbox" checked name="{{item.task}}" class="radio" (change)="complete(item.id)">
+        } @else {
+          <input type="checkbox" name="{{item.task}}" class="radio" (change)="complete(item.id)">
+        }
+        <!-- <input type="text" class="name" value="{{item.id}}"> -->
+        <input type="text" class="name" value="{{item.task}}">
+        <button class="bt-delete" (click)="deleteTodo(item.id)">Eliminar</button>
+      </div>
+
+    } @empty {
+    <div>No hay tareas</div>
+    }
+  </div>
+
+  <div class="table w-50">
+    <div class="table-head">
+      <h2>Completados</h2>
+    </div>
+
+    @for (item of todos; track item.task) {
+
+    @if (item.completed === true ) {
+      <div class="row">
+        <input type="checkbox" checked name="{{item.task}}" class="radio" (change)="complete(item.id)">
+        <!-- <input type="text" class="name" value="{{item.id}}"> -->
+        <input type="text" class="name" value="{{item.task}}">
+        <button class="bt-delete" (click)="deleteTodo(item.id)">Eliminar</button>
+      </div>
+    }
+
+    } @empty {
+    <div>No hay tareas</div>
+    }
+  </div>
+
+</div>
+

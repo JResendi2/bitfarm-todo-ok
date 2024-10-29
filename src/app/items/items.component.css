@@ -1,0 +1,70 @@
+h2{
+  margin: 0;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.d-flex{
+  display: flex;
+  gap: 1rem;
+}
+
+.table-head{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-complete-all{
+  background-color: #761f78;
+  color: white;
+}
+
+.btn-delete-all{
+  background-color: #2b1ba6;
+  color: white;
+}
+
+
+.tasks{
+  display: flex;
+  gap: 1rem;
+}
+
+.row{
+  display: flex;
+  gap: 1rem;
+  background-color: #26283d;
+  padding: 0.2rem;
+}
+
+.row .name{
+  border: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #26283d;
+  color: white;
+}
+
+.row .radio{
+  border: none;
+}
+
+.bt-delete{
+  border-color: #4d4f66;
+  background-color: #26283d;
+  color: white;
+  margin: 0;
+  font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+
+
+
+
+
