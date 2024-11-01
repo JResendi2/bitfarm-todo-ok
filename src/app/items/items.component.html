@@ -37,13 +37,20 @@
       <h2>Completados</h2>
     </div>
 
-    @for (item of todos; track item.task) {
+    @for (item of todos; track item.task; let idx = $index) {
 
     @if (item.completed === true ) {
       <div class="row">
         <input type="checkbox" checked name="{{item.task}}" class="radio" (change)="complete(item.id)">
         <!-- <input type="text" class="name" value="{{item.id}}"> -->
         <input type="text" class="name" value="{{item.task}}">
+
+        <a [routerLink]="['details/' + idx]">
+          <span class="btn-details">
+            Detalles
+          </span>
+        </a>
+
         <button class="bt-delete" (click)="deleteTodo(item.id)">Eliminar</button>
       </div>
     }
@@ -53,5 +60,9 @@
     }
   </div>
 
+
 </div>
+<br>
+
+<router-outlet/>
 

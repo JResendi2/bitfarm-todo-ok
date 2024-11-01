@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Input} from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 
@@ -14,9 +14,9 @@ import {FormsModule} from '@angular/forms';
 export class NewitemComponent {
   @Output() messageEvent = new EventEmitter<string>();
 
-  newTask:string = '';
+  newTask:string = ''; // está a la escucha del input del html
 
-  addTodo() {
+  addTodo() { // se ejecuta cuando se presiona el botón "Agregar"
     this.messageEvent.emit(this.newTask);
     this.newTask = "";
   }

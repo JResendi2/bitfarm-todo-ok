@@ -24,6 +24,10 @@ export class TodoService {
     return this.todos;
   }
 
+  getOne(i:number) {
+    return this.todos[i];
+  }
+
   addTodo(task:string){
     this.todos.push({id: uuid(), task: task, completed: false});
   }

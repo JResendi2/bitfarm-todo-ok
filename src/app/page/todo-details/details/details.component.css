@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.content{
+  border: solid gray 1px;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.content .row{
+  display: flex;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+}
+
+.row input{
+  padding: 0.2rem 1rem;
+}
+
+.content .label{
+  width: 3rem !important;
+}

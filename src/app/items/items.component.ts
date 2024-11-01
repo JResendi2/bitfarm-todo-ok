@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 import { AsyncPipe, NgClass, NgForOf, NgIf } from '@angular/common';
 import { NewitemComponent } from "../newitem/newitem.component";
 import { TodoService } from '../services/todo.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 interface Todo {
   id: string;
@@ -15,7 +16,9 @@ interface Todo {
   standalone: true,
   imports: [
     NgForOf,
-    NewitemComponent
+    NewitemComponent,
+    RouterLink,
+    RouterOutlet
 ],
   templateUrl: './items.component.html',
   styleUrl: './items.component.css'
@@ -23,7 +26,6 @@ interface Todo {
 
 // export class ItemsComponent implements OnInit{
   export class ItemsComponent{
-  // todos = [] as Todo[];
   constructor(private service: TodoService) {}
 
   /*
